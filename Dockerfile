@@ -25,7 +25,7 @@ RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 #COPY "$PWD"/${ARACHNI_VERSION}-linux-x86_64.tar.gz ${ARACHNI_VERSION}-linux-x86_64.tar.gz
-RUN wget https://github.com/Arachni/arachni/releases/download/v1.5.1/${ARACHNI_VERSION}-linux-x86_64.tar.gz && \
+RUN wget https://github.com/Arachni/arachni/releases/download/v1.6.1.3/${ARACHNI_VERSION}-linux-x86_64.tar.gz && \
     tar xzvf ${ARACHNI_VERSION}-linux-x86_64.tar.gz && \
     mv ${ARACHNI_VERSION}/ /usr/local/arachni && \
     rm -rf *.tar.gz
